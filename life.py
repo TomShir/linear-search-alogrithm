@@ -33,12 +33,12 @@ try:
     pick_integer=int(input('integer:'))
     while pick_integer not in random_numbers_list:
       time.sleep(1)
-      loop_over(sequence=f'Error,{pick_integer} is not in the list\n',delay_time=0.01,text_color=colors[0])
+      loop_over(sequence=f'{pick_integer} is not in the list\n',delay_time=0.01,text_color=colors[0])
       pick_integer=int(input('integer:'))
       if pick_integer in random_numbers_list:
         break 
-    else:
-      time.sleep(1)
-      loop_over(sequence=f'{pick_integer} is in the list at the index of {random_numbers_list.index(pick_integer)}.',text_color=colors[2],delay_time=0.1)
+    
+    time.sleep(1)
+    loop_over(sequence=f'{pick_integer} is in the list',text_color=colors[2],delay_time=0.1)
 except ValueError:
   loop_over(sequence='Error, you need to enter an integer')
